@@ -1,10 +1,10 @@
 {
-  "name": "hsr.js",
-  "version": "0.0.0",
+  "name": "@whiskeyhou/hsr",
+  "version": "0.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npx webpack serve",
+    "start": "npx webpack serve --config webpack.config.js",
     "build": "npx rollup --config rollup.config.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

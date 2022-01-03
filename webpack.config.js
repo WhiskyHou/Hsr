@@ -1,5 +1,5 @@
 const path = require("path");
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   mode: "development",
@@ -13,8 +13,13 @@ module.exports = {
       },
     ],
   },
+  resolve: {
+    extensions: ['.ts', '.js', '.json']
+  },
   devServer: {
+    // static: path.resolve(__dirname, "bundle"),
     static: "./bundle",
+    // contentBase: path.resolve(__dirname, "bundle"),
     host: "localhost",
     port: 3000,
     open: true,
