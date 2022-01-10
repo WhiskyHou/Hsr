@@ -8,13 +8,24 @@ module.exports = {
     rules: [
       {
         test: /\.tsx?$/,
-        use: "ts-loader",
+        use: ["ts-loader"],
         exclude: /node_modules/,
+      },
+      {
+        test: /\.wasm$/,
+        use: ["wasm-loader"],
       },
     ],
   },
   resolve: {
-    extensions: ['.ts', '.js', '.json']
+    extensions: ['.ts', '.js', '.json'],
+    fallback: {
+      path: require.resolve('path-browserify'),
+      crypto: require.resolve('crypto-browserify'),
+      buffer: require.resolve('buffer'),
+      stream: require.resolve('stream-browserify'),
+      fs: false,
+    }
   },
   devServer: {
     // static: path.resolve(__dirname, "bundle"),

@@ -7,6 +7,6 @@
     "module": "es6",
     "target": "esnext",
   },
-  "include": ["src"],
+  "include": ["src", "typings"],
   "exclude": ["node_module", "dist"]
 }
