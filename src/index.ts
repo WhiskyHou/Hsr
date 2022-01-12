@@ -1,7 +1,5 @@
 import { Test } from './test/test';
-// import eig from 'eigen';
-// const eig = require('eigen');
-import './bootscrip';
+import { inverse, Matrix } from 'ml-matrix';
 
 console.log('Here is Hsr.js, welcome!!');
 new Test().log();
@@ -14,8 +12,5 @@ const ctx = canvas.getContext('2d');
 console.log('context ', ctx);
 ctx.fillRect(0, 0, 100, 100);
 
-eig.ready.then(() => {
-  const m = new eig.Matrix([[1, 2], [3, 4]]);
-  m.print('M');
-  m.delete();
-});
+const A = new Matrix([[4, 7], [2, 6]]);
+console.log(inverse(A));

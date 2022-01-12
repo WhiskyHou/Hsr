@@ -4,9 +4,10 @@
     "sourceMap": true,
     "declaration": false,
     "noImplicitAny": true,
-    "module": "es6",
+    "module": "ES6",
     "target": "esnext",
+    "moduleResolution": "Node"
   },
-  "include": ["src", "typings"],
-  "exclude": ["node_module", "dist"]
+  "include": ["src"],
+  "exclude": ["node_modules", "dist", "pack"]
 }
